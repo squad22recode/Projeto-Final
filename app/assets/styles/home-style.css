@@ -6,7 +6,6 @@
     --cinza-quase-branco: #c4d1e0;
 }
 
-
 section,
 main,
 footer {
@@ -23,7 +22,7 @@ header div,
 }
 
 .list-items:last-child {
-    margin-bottom: 72px;
+    margin-bottom: 71px;
 }
 
 .list-items li a {
@@ -39,7 +38,6 @@ header div,
     padding: 0;
 }
 
-
 #img1 {
     width: 100%;
     height: 100%;
@@ -52,7 +50,11 @@ header div,
 
 main {
     background: rgb(4, 52, 124);
-    background: linear-gradient(277deg, rgba(4, 52, 124, 1) 0%, rgba(104, 129, 165, 1) 48%);
+    background: linear-gradient(
+        277deg,
+        rgba(4, 52, 124, 1) 0%,
+        rgba(104, 129, 165, 1) 48%
+    );
     margin-top: -72px;
 }
 
@@ -77,7 +79,7 @@ main {
 p {
     color: var(--cinza-quase-branco);
     width: 90%;
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
 
 .button1 a,
@@ -98,7 +100,6 @@ p {
 }
 
 .button2 {
-
     background-color: transparent;
 }
 
@@ -115,7 +116,7 @@ p {
     padding: 25px 0;
 }
 
-.section-2-container>div {
+.section-2-container > div {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -129,7 +130,6 @@ p {
 
 .text-section2 {
     align-self: center;
-
 }
 
 .text-section2 p {
@@ -140,9 +140,7 @@ p {
     width: 90%;
 }
 
-
-@media screen and (max-width:457px) {
-
+@media screen and (max-width: 457px) {
     .text h4,
     h1 {
         display: none;
@@ -154,8 +152,7 @@ p {
     }
 }
 
-@media screen and (min-width:992px) {
-
+@media screen and (min-width: 992px) {
     .list-items:last-child {
         margin-bottom: 0;
     }
@@ -183,7 +180,6 @@ p {
     #img1 {
         top: 10px;
         right: 300px;
-
     }
 
     #img2 {
@@ -202,14 +198,12 @@ p {
         color: var(--azul-escuro);
         font-size: 4rem;
         font-weight: 600;
-
     }
 
     .text h4,
     p {
         color: var(--cinza-quase-branco);
         width: 50%;
-
     }
 
     .text {
@@ -217,8 +211,7 @@ p {
         padding: 0 0;
     }
 
-    .section-2-container>div {
-
+    .section-2-container > div {
         flex-direction: row;
     }
 
