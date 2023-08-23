@@ -21,6 +21,18 @@ header div,
     z-index: 2;
 }
 
+header li a {
+    color: var(--cinza-quase-branco) !important;
+}
+
+header li a:hover {
+    opacity: .5;
+}
+
+.active {
+    color: var(--cinza-claro) !important;
+}
+
 .list-items:last-child {
     margin-bottom: 71px;
 }

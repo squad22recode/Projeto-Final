@@ -1,0 +1,25 @@
+:root {
+    --azul-claro: #5197f5;
+    --cinza-claro: #83a4c9;
+    --azul-escuro: #04347c;
+    --cinza-escuro: #6881a5;
+    --cinza-quase-branco: #c4d1e0;
+}
+
+header {
+    background: linear-gradient(277deg,
+            rgba(4, 52, 124, 1) 0%,
+            rgba(104, 129, 165, 1) 48%);
+}
+
+header li a {
+    color: var(--cinza-quase-branco) !important;
+}
+
+header li a:hover {
+    opacity: .5;
+}
+
+.active {
+    color: var(--cinza-claro) !important;
+}
