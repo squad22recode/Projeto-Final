@@ -178,7 +178,7 @@ p {
     flex-wrap: wrap;
 }
 
-.card {
+.card-info {
     background: transparent;
     display: flex;
     flex-direction: column;
@@ -194,7 +194,7 @@ p {
     border-radius: 0;
 }
 
-.card>div {
+.card-info>div {
     width: 115%;
     background-color: var(--azul-claro);
     text-align: center;
@@ -203,17 +203,17 @@ p {
 
 }
 
-.card h5 {
+.card-info h5 {
     color: var(--cinza-quase-branco);
     height: 48px;
 }
 
-.card>div>span {
+.card-info>div>span {
     font-size: 1rem;
     color: var(--cinza-quase-branco);
 }
 
-.card p:last-child {
+.card-info p:last-child {
     font-size: 1rem;
     width: 90%;
     margin: 0;
@@ -343,7 +343,7 @@ p {
         position: relative;
     }
 
-    .card {
+    .card-info {
         flex: 1;
     }
 
