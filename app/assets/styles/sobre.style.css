@@ -63,19 +63,26 @@ footer {
 
 .section-1-container {
     display: flex;
-
-    gap: 2rem;
+    align-items: center;
+    column-gap: 2rem;
 }
 
 .section-1-container article {
-    text-align: left;
+    text-align: justify;
     width: 70%;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--azul-escuro);
 }
 
 .section-1-container figure {
     text-align: justify;
+    height: fit-content;
+    width: fit-content;
+}
+
+.section-1-container figure img {
+    margin-top: -3rem;
+    border-radius: 1rem;
 }
 
 .section-1-container button {
@@ -89,8 +96,12 @@ footer {
     transition: all 0.5s ease;
 }
 
+.section-1-container button:hover {
+    background: var(--cinza-escuro);
+}
+
 .section-2-container {
-    margin-top: 1.5rem;
+    margin: 5rem 0;
     display: flex;
     justify-content: center;
     box-shadow: rgba(4, 52, 124, 0.5) 0px 2px 8px 0px;
@@ -117,4 +128,76 @@ footer {
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--azul-escuro);
+}
+
+.section-3-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    color: var(--azul-escuro);
+}
+
+.section-3-container img {
+    max-width: 10%;
+}
+
+.section-3-container .item img {
+    max-width: 30%;
+    border-radius: 50%;
+}
+
+.section-3-container .item div {
+    width: 60%;
+    text-align: left;
+}
+
+.section-3-container .item h2 {
+    color: initial;
+
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-3-container .item div p {
+    text-align: left;
+    font-size: 20px;
+}
+
+.section-3-container .item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.missao,
+.valores,
+.visao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 1300px) {
+    .section-1-container {
+        flex-direction: column-reverse;
+    }
+
+    .section-1-container figure img {
+        margin-top: 2rem;
+        width: 50%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 780px) {
+    .section-2-container ul {
+        flex-direction: column;
+    }
+    .section-3-container .item {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .section-3-container .item img {
+        display: none;
+    }
 }
