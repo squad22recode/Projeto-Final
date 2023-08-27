@@ -4,27 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- import booststrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
     <title>GestãoCash - Área do Cliente</title>
+    <!-- imports css -->
     <link rel="stylesheet" href="assets/styles/home-style.css">
     <link rel="stylesheet" href="assets/styles/area-cliente-style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- imposts vendor bootstrap -->
     <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
     <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
     <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <!-- import google fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- import cript gráficos -->
     <script src="https://code.highcharts.com/highcharts.js"></script>
-    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 
 <body>
@@ -183,7 +190,7 @@
                                                                         <td>Cartão de crédito</td>
                                                                         <td>R$ 208,90</td>
                                                                         <td>Variável</td>
-                                                                        <td>cartão mastercard vencimento dia 10</td>
+                                                                        <td>Cartão mastercard vencimento dia 10</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>12</td>
@@ -363,7 +370,31 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                <canvas id="lineChart" style="max-height: 400px;"></canvas>
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", () => {
+                                        new Chart(document.querySelector('#lineChart'), {
+                                            type: 'line',
+                                            data: {
+                                                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto'],
+                                                datasets: [{
+                                                    label: 'Receita bruta anual',
+                                                    data: [750.10, 840.40, 900.00, 850.90, 1100.00, 910.90, 779.00, 898.50],
+                                                    fill: false,
+                                                    borderColor: '#04347c',
+                                                    tension: 0.1
+                                                }]
+                                            },
+                                            options: {
+                                                scales: {
+                                                    y: {
+                                                        beginAtZero: false
+                                                    }
+                                                }
+                                            }
+                                        });
+                                    });
+                                </script>
                             </section>
                         </div>
                         <!-- Fim navegação pessoa fisica -->
@@ -445,7 +476,7 @@
                                                         </div>
 
                                                         <div class="card-body">
-                                                            <h5 class="card-title">Receita <span>| esse mês </span>
+                                                            <h5 class="card-title">Receita <span>| Esse mês </span>
                                                             </h5>
 
                                                             <div class="d-flex align-items-center">
@@ -563,7 +594,7 @@
                                                         </div>
 
                                                         <div class="card-body">
-                                                            <h5 class="card-title">Vendas recentes <span>| hoje</span>
+                                                            <h5 class="card-title">Vendas recentes <span>| Hoje</span>
                                                             </h5>
 
                                                             <table class="table table-borderless datatable">
@@ -653,7 +684,7 @@
                                                         </div>
 
                                                         <div class="card-body pb-0">
-                                                            <h5 class="card-title">Mais vendidos<span> | esse mês</span>
+                                                            <h5 class="card-title">Mais vendidos<span> | Esse mês</span>
                                                             </h5>
 
                                                             <table class="table table-borderless">
@@ -858,7 +889,8 @@
                                                                     <tr>
                                                                         <th escope="col">Dia</th>
                                                                         <th escope="col">Receitas</th>
-                                                                        <th escope="col">Despesas</th>
+                                                                        <th escope="col">Despesas (custo produto, custo
+                                                                            do serviço, etc.)</th>
                                                                         <th escope="col">Investimentos (min 10%)</th>
                                                                         <th escope="col">Receita líquida</th>
                                                                     </tr>
@@ -1016,7 +1048,142 @@
                         <!-- Fim navegação pessoa juridica -->
                         <!-- Inicio navegação conhecimento -->
                         <div class="tab-pane fade" id="profile-study">
-                            conhecimento
+                            <section id="main" class="main">
+
+                                <div class="pagetitle">
+                                    <h1>Área do conhecimento</h1>
+                                </div>
+
+                                <div class="section dashboard">
+                                    <div class="row gap-2  justify-content-center">
+                                        <div class="card card-study">
+                                            <h3 class="card-header">Gestão financeira</h3>
+                                            <div>
+                                                <p> <i class="bi bi-alarm"></i> Duração 3h</p>
+                                                <p> <i class="bi bi-calendar3"></i> Conclusão 15 dias</p>
+                                            </div>
+                                            <p class="card-body">Muitos problemas de uma empresa podem ser solucionados
+                                                com
+                                                uma boa gestão
+                                                financeira. Veja neste curso como se posicionar para controlar as
+                                                finanças em seu negócio.</p>
+                                            <a href="https://www.sebrae.com.br/sites/PortalSebrae/cursosonline/gestao-financeira,7370b8a6a28bb610VgnVCM1000004c00210aRCRD"
+                                                class="btn" target="_blanck">Saiba mais</a>
+                                        </div>
+
+                                        <div class="card card-study">
+                                            <h3 class="card-header">Contador Parceiro: construindo o sucesso</h3>
+                                            <div>
+                                                <p> <i class="bi bi-alarm"></i> Duração 48h</p>
+                                                <p> <i class="bi bi-calendar3"></i> Conclusão 75 dias</p>
+                                            </div>
+                                            <p class="card-body">Capacitar os profissionais da contabilidade para atuar
+                                                em
+                                                gestão,
+                                                empreendedorismo e inovação visando a criação de uma rede de suporte e
+                                                consultoria para os pequenos negócios. </p>
+                                            <a href="https://www.sebrae.com.br/sites/PortalSebrae/cursosonline/contador-parceiro-construindo-o-sucesso,af35681a0e0f8710VgnVCM100000d701210aRCRD"
+                                                class="btn" target="_blanck">Saiba mais</a>
+                                        </div>
+
+                                        <div class="card card-study">
+                                            <h3 class="card-header">Comunicação no processo de vendas para pequenos
+                                                negócios</h3>
+                                            <div>
+                                                <p> <i class="bi bi-alarm"></i> Duração 6h</p>
+                                                <p> <i class="bi bi-calendar3"></i> Conclusão 15 dias</p>
+                                            </div>
+                                            <p class="card-body">O curso mostra a importância da comunicação no processo
+                                                de
+                                                venda e como
+                                                fazê-la da forma mais adequada ao seu negócio.</p>
+                                            <a href="https://www.sebrae.com.br/sites/PortalSebrae/cursosonline/comunicacao-no-processo-de-vendas-para-pequenos-negocios,2b77575592143810VgnVCM100000d701210aRCRD"
+                                                class="btn" target="_blanck">Saiba mais</a>
+                                        </div>
+
+                                        <div class="card card-study">
+                                            <h3 class="card-header">Inovação e agilidade: o futuro do empreendedorismo
+                                            </h3>
+                                            <div>
+                                                <p> <i class="bi bi-alarm"></i> Duração 20h</p>
+                                                <p> <i class="bi bi-calendar3"></i> Conclusão 30 dias</p>
+                                            </div>
+                                            <p class="card-body">A pandemia de Covid 19 acelerou de maneira imprevista a
+                                                adoção de mudanças e a digitalização dos negócios, e por isso a
+                                                necessidade desses conhecimentos aumentou exponencialmente.</p>
+                                            <a href="https://www.sebrae.com.br/sites/PortalSebrae/cursosonline/inovacao-e-agilidade-o-futuro-do-empreendedorismo,c269f07e6fb5c710VgnVCM100000d701210aRCRD"
+                                                class="btn" target="_blanck">Saiba mais</a>
+                                        </div>
+
+                                        <div class="card card-study">
+                                            <h3 class="card-header">Formação do preço de venda</h3>
+                                            <div>
+                                                <p> <i class="bi bi-alarm"></i> Duração 8h</p>
+                                                <p> <i class="bi bi-calendar3"></i> Conclusão 30 dias</p>
+                                            </div>
+                                            <p class="card-body">Aprenda a estruturar e analisar os custos de sua
+                                                empresa para estipular o preço de venda adequado para os seus produtos
+                                                ou serviços.</p>
+                                            <a href="https://www.sebrae.com.br/sites/PortalSebrae/cursosonline/formacao-do-preco-de-venda,7490b8a6a28bb610VgnVCM1000004c00210aRCRD  "
+                                                class="btn" target="_blanck">Saiba mais</a>
+                                        </div>
+
+                                        <div class="card card-study">
+                                            <h3 class="card-header">Marketing digital para sua empresa: reforçando sua
+                                                presença</h3>
+                                            <div>
+                                                <p> <i class="bi bi-alarm"></i> Duração 6h</p>
+                                                <p> <i class="bi bi-calendar3"></i> Conclusão 15 dias</p>
+                                            </div>
+                                            <p class="card-body">Saiba como impulsionar os resultados do seu negócio
+                                                através do marketing digital.</p>
+                                            <a href="https://www.sebrae.com.br/sites/PortalSebrae/cursosonline/marketing-digital-para-sua-empresa-reforcando-sua-presenca,c0c7125576a4e710VgnVCM100000d701210aRCRD"
+                                                class="btn" target="_blanck">Saiba mais</a>
+                                        </div>
+
+                                        <div class="card card-study">
+                                            <h3 class="card-header">Como comprar bem e de bons fornecedores</h3>
+                                            <div>
+                                                <p> <i class="bi bi-alarm"></i> Duração 2h</p>
+                                                <p> <i class="bi bi-calendar3"></i> Conclusão 15 dias</p>
+                                            </div>
+                                            <p class="card-body">Aprenda estratégias valiosas para comprar bem, adquirir
+                                                insumos de qualidade e obter preços e prazos favoráveis aos pagamentos,
+                                                aumentando a lucratividade dos seus negócios.</p>
+                                            <a href="https://www.sebrae.com.br/sites/PortalSebrae/cursosonline/como-comprar-bem-e-de-bons-fornecedores,0101b8a6a28bb610VgnVCM1000004c00210aRCRD"
+                                                class="btn" target="_blanck">Saiba mais</a>
+                                        </div>
+
+                                        <div class="card card-study">
+                                            <h3 class="card-header">Gestão de sua loja virtual em marketplace</h3>
+                                            <div>
+                                                <p> <i class="bi bi-alarm"></i> Duração 2h</p>
+                                                <p> <i class="bi bi-calendar3"></i> Conclusão 15 dias</p>
+                                            </div>
+                                            <p class="card-body">Ensinará ao participante quais são os principais
+                                                aspectos da gestão de uma loja virtual em marketplaces, bem como seus
+                                                indicadores e ferramentas oferecidas pelas operadoras de marketplaces.
+                                            </p>
+                                            <a href="https://www.sebrae.com.br/sites/PortalSebrae/cursosonline/como-melhorar-a-gestao-de-sua-loja-virtual-em-marketplace,0f9beb34f5193710VgnVCM1000004c00210aRCRD"
+                                                class="btn" target="_blanck">Saiba mais</a>
+                                        </div>
+
+                                        <div class="card card-study">
+                                            <h3 class="card-header">Como turbinar suas vendas</h3>
+                                            <div>
+                                                <p> <i class="bi bi-alarm"></i> Duração 3h</p>
+                                                <p> <i class="bi bi-calendar3"></i> Conclusão 15 dias</p>
+                                            </div>
+                                            <p class="card-body">Veja neste curso que para vender é preciso conhecer os
+                                                produtos, os clientes e as necessidades do mercado.</p>
+                                            <a href="https://www.sebrae.com.br/sites/PortalSebrae/cursosonline/como-turbinar-suas-vendas,1ba0b8a6a28bb610VgnVCM1000004c00210aRCRD"
+                                                class="btn" target="_blanck">Saiba mais</a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                         <!-- Fim navegação conhecimento -->
     </section>
