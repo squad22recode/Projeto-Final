@@ -14,6 +14,10 @@
     list-style: none;
 }
 
+main.container {
+    overflow: hidden;
+}
+
 img {
     display: block;
     margin: 0;
@@ -75,7 +79,6 @@ footer {
 }
 
 .section-1-container figure {
-    text-align: justify;
     height: fit-content;
     width: fit-content;
 }
@@ -92,7 +95,7 @@ footer {
     color: var(--cinza-quase-branco);
     padding: 0.8rem 1rem;
     font-weight: bold;
-    width: 30%;
+    max-width: 163px;
     transition: all 0.5s ease;
 }
 
@@ -180,24 +183,73 @@ footer {
 @media (max-width: 1300px) {
     .section-1-container {
         flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
     }
 
+    .section-1-container figure {
+        width: fit-content;
+        margin: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .section-1-container article {
+        width: 100%;
+    }
     .section-1-container figure img {
         margin-top: 2rem;
-        width: 50%;
         margin: 0;
     }
 }
 
 @media (max-width: 780px) {
+    .section-2-container {
+        box-shadow: none;
+    }
     .section-2-container ul {
         flex-direction: column;
+        row-gap: 3rem;
+        width: 100%;
+        padding: 0;
+    }
+
+    .section-2-container ul li {
+        width: 100%;
+        box-shadow: rgba(4, 52, 124, 0.01) 0px -12px 30px,
+            rgba(4, 52, 124, 0.01) 0px 4px 10px,
+            rgba(4, 52, 124, 0.1) 0px 12px 13px,
+            rgba(4, 52, 124, 0.09) 0px -3px 5px;
+        border-radius: 0.5rem;
+        padding: 0.5rem 0;
+    }
+
+    .section-2-container ul li span {
+        font-size: 1.3rem;
     }
     .section-3-container .item {
         flex-direction: column;
         justify-content: center;
     }
+    .section-3-container .item div {
+        width: 100%;
+    }
+    .section-3-container .item div h2 {
+        background: var(--azul-escuro);
+        border-radius: 0.7rem;
+        color: var(--cinza-quase-branco);
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
     .section-3-container .item img {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    main.container {
+        max-width: 100%;
+        padding: 0 20px;
     }
 }
