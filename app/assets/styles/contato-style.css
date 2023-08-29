@@ -40,6 +40,8 @@ main.container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
+    justify-content: center;
+    overflow-x: hidden;
 }
 
 .section-1-container {
@@ -93,6 +95,7 @@ main.container {
     background: #fff;
     width: 100%;
     padding: 5rem;
+    overflow-x: hidden;
 }
 
 .section-2-container div {
