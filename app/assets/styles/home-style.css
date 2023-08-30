@@ -50,6 +50,7 @@ main {
             rgba(4, 52, 124, 1) 0%,
             rgba(104, 129, 165, 1) 48%);
     margin-top: -72px;
+    padding-bottom: 100px;
 }
 
 .text {
@@ -159,7 +160,9 @@ p {
     justify-content: center;
     gap: 45px;
     flex-wrap: wrap;
+
 }
+
 
 .card-info {
     background: transparent;
@@ -205,6 +208,8 @@ p {
 .section-4-container {
     margin-top: 100px;
     min-height: 600px;
+
+
 }
 
 

@@ -193,7 +193,7 @@ h1 {
 }
 
 
-.footer {
+/* .footer {
     background: rgb(4, 52, 124)0%;
     background: linear-gradient(27deg,
             rgba(4, 52, 124, 1) 0%,
@@ -251,7 +251,7 @@ span {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-}
+} */
 
 @media screen and (max-width: 755px) {
     h6 {
