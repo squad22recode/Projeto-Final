@@ -21,29 +21,12 @@ header div,
     z-index: 2;
 }
 
-header li a {
-    color: var(--cinza-quase-branco) !important;
-}
-
-header li a:hover {
-    opacity: .5;
-}
-
-.active {
-    color: var(--cinza-claro) !important;
-}
 
 .list-items:last-child {
     margin-bottom: 71px;
 }
 
-.list-items li a {
-    color: var(--cinza-quase-branco);
-}
 
-.logo-img {
-    max-width: 170px;
-}
 
 .section-1-container {
     position: relative;
@@ -223,6 +206,8 @@ p {
     margin-top: 100px;
     min-height: 600px;
 }
+
+
 
 @media screen and (max-width:457px) {
 

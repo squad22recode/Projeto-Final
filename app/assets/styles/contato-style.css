@@ -13,7 +13,24 @@
     box-sizing: border-box;
 }
 
-header .nav-item span {
+header li a {
+    color: var(--cinza-quase-branco) !important;
+}
+
+header li a:hover {
+    opacity: .5;
+}
+
+.active {
+    color: var(--cinza-claro) !important;
+}
+
+.logo-img {
+    max-width: 170px;
+}
+
+
+/* header .nav-item span {
     background-color: var(--azul-escuro);
     display: block;
     width: 0;
@@ -23,7 +40,7 @@ header .nav-item span {
 
 header .nav-item:hover span {
     width: 100%;
-}
+} */
 
 body {
     overflow-x: hidden;
@@ -83,6 +100,7 @@ main.container {
 .info-email span p {
     margin: 0;
 }
+
 .info-email span p:nth-child(2) {
     color: var(--azul-escuro);
     font-weight: bolder;
@@ -238,19 +256,23 @@ form button:focus {
         grid-template-columns: 1fr;
         justify-items: center;
     }
+
     .section-1-container {
         justify-content: center;
         align-items: center;
     }
+
     .section-1-container h1 {
         text-align: center;
     }
+
     .section-2-container {
         margin-top: 3rem;
         justify-content: center;
         align-items: center;
         padding: 1rem;
     }
+
     .section-3-container ul {
         justify-content: center;
     }
@@ -264,10 +286,12 @@ form button:focus {
     .section-1-container h1 {
         font-size: 2rem;
     }
+
     .section-2-container {
         width: 100%;
         justify-content: center;
     }
+
     .section-2-container div {
         justify-content: center;
         align-items: center;

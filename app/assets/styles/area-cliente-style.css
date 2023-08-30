@@ -6,6 +6,7 @@
     --cinza-quase-branco: #c4d1e0;
 }
 
+
 header li a {
     color: var(--cinza-quase-branco) !important;
 }
@@ -17,6 +18,15 @@ header li a:hover {
 .active {
     color: var(--cinza-claro) !important;
 }
+
+.list-items li a {
+    color: var(--cinza-quase-branco);
+}
+
+.logo-img {
+    max-width: 170px;
+}
+
 
 .card-body {
     padding: 0 20px 20px 20px;
