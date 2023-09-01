@@ -4,7 +4,7 @@
 
 O GestãoCash é uma aplicação para ajudar pequenos empreendedores no gerenciamento do seu negóico, além disso dispõe de parcerias para seu desenvolvimento.
 
-[Clique aqui para acessar a aplicação em funcionamento]()
+[Clique aqui para acessar a aplicação em funcionamento](https://projeto-final-ochre.vercel.app/)
 
 ## Modelagem de dados
 
