@@ -2,7 +2,15 @@
 
 ## Descrição do projeto: 
 
-O GestãoCash é uma aplicação para ajudar pequenos empreendedores a se desenvolverem e gerir seu negócio.
+O GestãoCash é uma aplicação para ajudar pequenos empreendedores no gerenciamento do seu negóico, além disso dispõe de parcerias para seu desenvolvimento.
+
+[Clique aqui para acessar a aplicação em funcionamento]()
+
+## Modelagem de dados
+
+![Modelo conceitual](modelagem-dados/conceitual.png)
+
+![Modelo Lógico](modelagem-dados/logico.png)
 
 ## Pagina principal do projeto: 
 
